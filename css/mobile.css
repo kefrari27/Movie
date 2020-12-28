@@ -1,0 +1,59 @@
+/* HEADER */
+
+header {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template-areas: "logo user" "browser browser";
+  box-shadow: 0px 10px 10px 0px rgba(39, 51, 51, .2);
+}
+
+.container-logo {
+  grid-area: logo;
+}
+
+.container-browser {
+  grid-area: browser;
+}
+
+.container-browser input {
+  width: 80%;
+  height: 30px;
+  margin: 10px 0;
+}
+
+.container-user {
+  grid-area: user;
+}
+
+/*MAIN*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 10px;
+}
+
+/* MENU */
+
+main .menu {
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-areas: "home" "trending" "likes" "." "." "." "." "." "." "." "." "." "." "." "." "." ".""." "config" ".";
+  background: var(--primary-color);
+  border-radius: 10px;
+  justify-content: center;
+  grid-gap: 18px;
+}
+
+/* PRINCIPAL */
+
+main .principal {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+main .principal .principal-title {
+  grid-column: 1 / -1;
+}

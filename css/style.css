@@ -1,0 +1,257 @@
+/* Condiciones iniciales */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #273333;
+  --white: #ffffff;
+  --titles: 'Anton', sans-serif;
+  --text: 'Comic Neue', cursive;
+}
+
+/* BODY */
+
+body {
+  display: grid;
+}
+
+/* HEADER */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  box-shadow: 0px 10px 10px 0px rgba(39, 51, 51, .2);
+}
+
+.container-logo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.container-logo img {
+  max-width: 60px;
+}
+
+.container-logo p {
+  font-family: var(--titles);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  justify-self: left;
+}
+
+.container-browser {
+  display: grid;
+  align-items: center;
+}
+
+.container-browser input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  justify-self: center;
+}
+
+.container-browser button {
+  width: 35%;
+  height: 25px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-family: var(--text);
+  font-weight: bold;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 5px;
+  justify-self: center;
+  margin: 10px 0;
+}
+
+.container-user {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.container-user img {
+  max-width: 60px;
+  border-radius: 50px;
+}
+
+.container-user p {
+  font-family: var(--text);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  justify-self: end;
+}
+
+/* ACTIONS */
+
+.container-browser button:hover {
+  background: rgba(39, 51, 51, .8);
+}
+
+.container-browser button:active {
+  background: rgba(39, 51, 51, .2);
+  color: var(--primary-color);
+}
+
+.container-user img:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.container-user p:hover {
+  text-decoration: underline;
+}
+
+.container-logo p:hover {
+  color: rgba(39, 51, 51, .8);
+}
+
+/*MAIN*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 15px;
+  margin-top: 10px;
+}
+
+/* MENU */
+
+main .menu {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: "home" "trending" "likes" "." "." "." "config" ".";
+  background: var(--primary-color);
+  border-radius: 10px;
+  justify-content: center;
+  grid-gap: 18px;
+}
+
+main .menu .home {
+  display: grid;
+  grid-area: home;
+}
+
+main .menu .trending {
+  display: grid;
+  grid-area: trending;
+}
+
+main .menu .likes {
+  display: grid;
+  grid-area: likes;
+}
+
+main .menu .config {
+  display: grid;
+  grid-area: config;
+}
+
+main .menu i {
+  font-size: 3rem;
+  color: var(--white);
+  margin-top: 10px;
+  justify-self: center;
+}
+
+main .menu p {
+  font-family: var(--titles);
+  font-size: 1.4rem;
+  color: var(--white);
+  justify-self: center;
+}
+
+/* ACTIONS */
+
+main .menu i:hover {
+  font-size: 3.4rem;
+}
+
+/* PRINCIPAL */
+
+main .principal {
+  display: grid;
+  grid-template: 20px 1fr 20px 1fr 20px 1fr / repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+main .principal .principal-title {
+  grid-column: span 3;
+}
+
+main .principal .principal-title h2 {
+  font-family: var(--titles);
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+main .principal .principal-movie {
+  position: relative;
+  max-width: 310px;
+}
+
+main .principal .principal-movie img {
+  position: relative;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+main .principal .principal-movie p {
+  position: absolute;
+  font-family: var(--text);
+  font-size: 1.6rem;
+  padding: 10px;
+  background: rgba(39, 51, 51, .8);
+  border-radius: 10px;
+  color: var(--white);
+  bottom: 0;
+  max-width: 300px;
+}
+
+/* ACTIONS */
+
+main .principal .principal-movie p:hover {
+  height: 100%;
+  padding: 20% 5%;
+}
+
+/* FOOTER */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 50px;
+  background: var(--primary-color);
+  margin-top: 15px;
+}
+
+footer section {
+  color: var(--white);
+  justify-self: center;
+  align-self: center;
+  font-family: var(--text);
+  font-size: 1.8rem;
+}
+
+footer section i {
+  font-size: 3rem;
+  margin: 0 10px;
+}
+
+/* ACTIONS */
+
+footer section i:hover {
+  font-size: 3.5rem;
+}
